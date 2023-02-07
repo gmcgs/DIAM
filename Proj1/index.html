@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>"ISCTE Got Talent"</title>
-    </head>
-    <body>
-        <a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>"ISCTE Got Talent"</title>
+</head>
+<body>
+<a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
+<form name="input" action="paginaDeProcessamento">
+    Título: <input type="text" name="tit"><br>
+    Descrição: <input type="text" name="des"><br>
+    Nome: <input type="text" name="nome"><br>
+    Número: <input type="text" name="num"><br>
+    Telemóvel: <input type="text" name="tlm"><br>
+    E-mail: <input type="text" name="email"><br>
+    <input type="submit" value="Submeter">
+</form>
+<form action="action_page">
+    <label for="times">Escolha um horário:</label>
+    <select id="times" name="cars">
+        <option value="horario1">Horário 1</option>
+        <option value="horario2">Horário 2</option>
+        <option value="horario3">Horário 3</option>
+        <option value="horario4">Horário 4</option>
+    </select>
+    <input type="submit" value="Enviar resposta">
+    <input type="reset">
+</form>
+</body>
 </html>
