@@ -13,15 +13,18 @@ body{
 }
 
 .formulario{
-    display: flex;
+    justify-content: center;
 }
+
 label{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 input{
     display: flex;
+    border-radius: 10px;
 }
+
 
 button{
     border: none;

@@ -7,25 +7,31 @@
 </head>
 <body>
 <a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
-<form className="formulario" action="paginaDeProcessamento">
+<form class="formulario" action="paginaDeProcessamento">
 
-    <label name="titulo">Título: </label>
+    <label class="titulo">Título:
         <input type="text" placeholder="Ex:malabarismo" name="tit"/>
+    </label>
 <br>
-    <label name="descricao">Descrição: </label>
+    <label class="descricao">Descrição:
         <input type="text" placeholder="breve explicação" name="des"/>
+    </label>
 <br>
-    <label name="nome">Nome: </label>
+    <label class="nome">Nome:
         <input type="text" placeholder="Carlota" name="nome"/>
+    </label>
 <br>
-    <label name="num">Número: </label>
+    <label class="num">Número:
         <input type="number" placeholder="98704" name="num"/>
+    </label>
 <br>
-    <label name="tlm">Telemóvel: </label>
+    <label class="tlm">Telemóvel:
         <input type="text" placeholder="+351 987632263" name="tlm"/>
+    </label>
 <br>
-    <label name="email">E-mail:</label>
+    <label class="email">E-mail:
         <input type="email" placeholder="gmcs@iscte.pt" name="email">
+    </label>
 <br>
 
 </form>
@@ -38,8 +44,10 @@
         <option value="horario4">Horário 4</option>
     </select>
 </form>
-<form>
+<form action=accept.html>
     <button type="submit">Enviar resposta </button>
+</form>
+<form>
     <button type="reset"> reset </button>
 </form>
 </body>
