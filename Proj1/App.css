@@ -1,4 +1,33 @@
+html{
+    display: flex;
+    justify-content: center;
+}
+a{
+    display: flex;
+    justify-content: center;
+}
+
 body{
-background: darkturquoise;
-<!-- Azul de LEI é o melhor azul -->
+    background: #dcf5e9;
+    margin-outside: 60px;
+}
+
+.formulario{
+    display: flex;
+}
+label{
+    display: flex;
+    justify-content: left;
+}
+input{
+    display: flex;
+}
+
+button{
+    border: none;
+    margin: 20px;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }

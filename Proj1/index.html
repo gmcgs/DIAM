@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:Titulo="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="App.css">
@@ -7,14 +7,27 @@
 </head>
 <body>
 <a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
-<form name="input" action="paginaDeProcessamento">
-    Título: <input type="text" name="tit"><br>
-    Descrição: <input type="text" name="des"><br>
-    Nome: <input type="text" name="nome"><br>
-    Número: <input type="text" name="num"><br>
-    Telemóvel: <input type="text" name="tlm"><br>
-    E-mail: <input type="text" name="email"><br>
-    <input type="submit" value="Submeter">
+<form className="formulario" action="paginaDeProcessamento">
+
+    <label name="titulo">Título: </label>
+        <input type="text" placeholder="Ex:malabarismo" name="tit"/>
+<br>
+    <label name="descricao">Descrição: </label>
+        <input type="text" placeholder="breve explicação" name="des"/>
+<br>
+    <label name="nome">Nome: </label>
+        <input type="text" placeholder="Carlota" name="nome"/>
+<br>
+    <label name="num">Número: </label>
+        <input type="number" placeholder="98704" name="num"/>
+<br>
+    <label name="tlm">Telemóvel: </label>
+        <input type="text" placeholder="+351 987632263" name="tlm"/>
+<br>
+    <label name="email">E-mail:</label>
+        <input type="email" placeholder="gmcs@iscte.pt" name="email">
+<br>
+
 </form>
 <form action="action_page">
     <label for="times">Escolha um horário:</label>
@@ -24,8 +37,10 @@
         <option value="horario3">Horário 3</option>
         <option value="horario4">Horário 4</option>
     </select>
-    <input type="submit" value="Enviar resposta">
-    <input type="reset">
+</form>
+<form>
+    <button type="submit">Enviar resposta </button>
+    <button type="reset"> reset </button>
 </form>
 </body>
 </html>
