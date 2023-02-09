@@ -5,6 +5,7 @@ html{
 a{
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 body{
