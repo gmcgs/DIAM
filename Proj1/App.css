@@ -1,22 +1,13 @@
-html{
-    display: block;
-}
-
 header {
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Bahnschrift, sans-serif;
 }
 
 body{
-    background: #0000;
-    margin-outside: 60px;
-}
-
-.formulario{
-    justify-content: center;
-}
-
-.horarios {
+    margin: 0;
+    font-family: Bahnschrift, sans-serif;
 }
 
 .b_lim{
@@ -25,29 +16,64 @@ body{
     16 0,
     auto;
 }
+
 .b_reg{
     background-color: red;
+    color: white;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🫡</text></svg>")
     16 0,
     auto;
 }
+
 .b_info{
-    background-color: red;
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤡</text></svg>")
+    background-color: #ee8326;
+    color: #ffffff;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>➕</text></svg>")
+    16 0,
+    auto;
+}
+.b_act {
+    background-color: darkblue;
+    color: white;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥰</text></svg>")
+    16 0,
+    auto;
+}
+.b_volt {
+    background-color: #ee8326;
+    color: #ffffff;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👈🏼</text></svg>")
     16 0,
     auto;
 }
 
-.b_reg, .b_lim, .b_info{
+.b_reg, .b_lim, .b_info, .b_act{
     margin: 4px;
     border: none;
+    margin-bottom: 100px;
 }
 
-.bot, .horarios{
+.b_volt {
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+.bot, .horarios, .formulario{
     margin: 5px;
     display: flex;
     justify-content: center;
 }
+
+.day, .times{
+    margin: 4px;
+    margin-bottom: 15px;
+}
+
+.lab {
+    margin-left: 10px;
+}
+
 img{
     display: flex;
     width: 50px;
@@ -55,48 +81,58 @@ img{
 
 }
 
-.linksheader {
-    width: 50%;
-    position: relative;
-}
-
-.links {
-    justify-content: left;
-    width: max-content;
-}
-
-.contactosheader {
-    position: relative;
-    left: 50%;
-    justify-content: right;
-}
-
-.contactos {
-    justify-content: right;
-    width: max-content;
-}
-
-.fundo{
-
-}
 footer {
-    position: fixed;
-    background-color: pink;
+    background-color: #5790d0;
     padding: 10px;
-    left: 0;
+    text-align: center;
+    position: relative;
     bottom: 0;
-    width: 100%;
+    top: auto;
+}
+
+.column {
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.row {
+    justify-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.juri {
+    justify-content: center;
+}
+
+p {
+    margin: 0;
 }
 
 label{
     display: flex;
     justify-content: center;
 }
+
 input{
     display: flex;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     border-radius: 10px;
 }
+
 table{
     display: flex;
     justify-content: center;

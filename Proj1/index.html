@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="App.css">
-    <title>"ISCTE Got Talent"</title>
+    <title>ISCTE Got Talent</title>
 </head>
 <body>
 <header>
@@ -12,44 +12,44 @@
 <form className="formulario" action="paginaDeProcessamento">
 
     <label class="titulo">Título:
-        <input type="text" placeholder="Ex:malabarismo" name="tit"/>
+        <input class="lab" type="text" placeholder="Ex:malabarismo" name="tit"/>
     </label>
     <br>
     <label class="descricao">Descrição:
-        <input type="text" placeholder="breve explicação" name="des"/>
+        <input class="lab" type="text" placeholder="breve explicação" name="des"/>
     </label>
     <br>
     <label class="nome">Nome:
-        <input type="text" placeholder="Char" name="nome"/>
+        <input class="lab" type="text" placeholder="Char" name="nome"/>
     </label>
     <br>
     <label class="num">Número:
-        <input type="number" placeholder="98704" name="num"/>
+        <input class="lab" type="number" placeholder="98704" name="num"/>
     </label>
     <br>
     <label class="curso">Curso:
-        <input type="text" placeholder="LEI" name="curso"/>
+        <input class="lab" type="text" placeholder="LEI" name="curso"/>
     </label>
     <br>
     <label class="tlm">Telemóvel:
-        <input type="text" placeholder="+351 987632263" name="tlm"/>
+        <input class="lab" type="text" placeholder="+351 987632263" name="tlm"/>
     </label>
     <br>
     <label class="email">E-mail:
-        <input type="email" placeholder="gmcgs@iscte.pt" name="email">
+        <input class="lab" type="email" placeholder="gmcgs@iscte.pt" name="email">
     </label>
     <br>
 
 </form>
 <form class=horarios action="action_page">
-    <label for="times">Escolha um Dia:</label>
-    <select id="day" name="dia">
+    <label class=day for="day">Escolha um Dia:</label>
+    <select class=day id="day" name="dia">
         <option value="dia1">10/02/2023</option>
         <option value="dia2">11/02/2023</option>
         <option value="dia3">12/02/2023</option>
     </select>
-    <label for="times">Escolha um horário:</label>
-    <select id="times" name="horario">
+    <label class=times for="times">Escolha um horário:</label>
+    <select class=times id="times" name="horario">
         <option value="horario1">12:00h</option>
         <option value="horario2">15:00h</option>
         <option value="horario3">18:00h</option>
@@ -59,27 +59,28 @@
 <div class="bot">
     <input class=b_reg type="submit" onclick="add();" value="Registar">
     <input class=b_lim type="reset" name="Submit2" value="Limpar">
+    <form action=acts.html>
+        <input class=b_act type=submit value="Ver atuações já registadas">
+    </form>
     <form action=more_info.html>
         <input class="b_info" type=submit value="+info">
     </form>
 </div>
-<br>
-<footer >
-    <div class="fundo">
-        <div class=linksheader>
+<footer>
+    <div class="row">
+        <div class=column>
             <h3>Links associados</h3>
             <a class=links href="https://www.instagram.com/aeiscte/">AEISCTE</a><br>
             <a class=links href="https://www.instagram.com/taiscte/">TAISCTE</a><br>
             <a class=links href="https://www.instagram.com/miscutem/">MISCUTEM</a>
         </div>
-        <div class=contactosheader>
+        <div class=column>
             <h3>Contactos</h3>
             <p>telemovel</p>
             <p>email</p>
             <p>telefone fixo</p>
         </div>
     </div>
-
 </footer>
 </body>
 </html>
