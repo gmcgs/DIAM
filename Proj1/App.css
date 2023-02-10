@@ -1,11 +1,10 @@
 html{
-    display: flex;
-    justify-content: center;
+    display: block;
 }
-a{
-    display: flex;
+
+header {
     justify-content: center;
-    color: white;
+    display: flex;
 }
 
 body{
@@ -33,11 +32,16 @@ body{
     16 0,
     auto;
 }
+.b_info{
+    background-color: red;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤡</text></svg>")
+    16 0,
+    auto;
+}
 
-.b_reg, .b_lim {
+.b_reg, .b_lim, .b_info{
     margin: 4px;
     border: none;
-
 }
 
 .bot, .horarios{
@@ -45,13 +49,44 @@ body{
     display: flex;
     justify-content: center;
 }
-
-.tabela {
+img{
+    display: flex;
+    width: 50px;
+    height: 50px;
 
 }
 
-.links {
+.linksheader {
+    width: 50%;
+    position: relative;
+}
 
+.links {
+    justify-content: left;
+    width: max-content;
+}
+
+.contactosheader {
+    position: relative;
+    left: 50%;
+    justify-content: right;
+}
+
+.contactos {
+    justify-content: right;
+    width: max-content;
+}
+
+.fundo{
+
+}
+footer {
+    position: fixed;
+    background-color: pink;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 label{

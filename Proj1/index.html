@@ -6,7 +6,9 @@
     <title>"ISCTE Got Talent"</title>
 </head>
 <body>
-<a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
+<header>
+    <a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
+</header>
 <form className="formulario" action="paginaDeProcessamento">
 
     <label class="titulo">Título:
@@ -42,99 +44,33 @@
 <form class=horarios action="action_page">
     <label for="times">Escolha um horário:</label>
     <select id="times" name="horario">
-        <option value="horario1">Horário 1</option>
-        <option value="horario2">Horário 2</option>
-        <option value="horario3">Horário 3</option>
-        <option value="horario4">Horário 4</option>
-        <option value="horario5">Horário 5</option>
-        <option value="horario6">Horário 6</option>
-        <option value="horario7">Horário 7</option>
-        <option value="horario8">Horário 8</option>
-        <option value="horario9">Horário 9</option>
-        <option value="horario10">Horário 10</option>
+        <option value="horario1">12:00h</option>
+        <option value="horario2">15:00h</option>
+        <option value="horario3">18:00h</option>
+        <option value="horario4">21:00h</option>
     </select>
 </form>
 <div class="bot">
     <input class=b_reg type="submit" onclick="add();" value="Registar">
     <input class=b_lim type="reset" name="Submit2" value="Limpar">
+    <form action=more_info.html>
+        <input class="b_info" type=submit value="+info">
+    </form>
 </div>
 <br>
+<footer >
+    <div class="fundo">
+        <div class=linksheader>
+            <h3>Links associados</h3>
+            <a class=links href="https://www.instagram.com/aeiscte/">AEISCTE</a><br>
+            <a class=links href="https://www.instagram.com/taiscte/">TAISCTE</a><br>
+            <a class=links href="https://www.instagram.com/miscutem/">MISCUTEM</a>
+        </div>
+        <div class=contactosheader>
+            <h3>Contactos</h3>
+        </div>
+    </div>
 
-<table class=tabela id="output" border="1">
-    <tr>
-        <th>Título</th>
-        <th>Nome</th>
-        <th>Horário</th>
-        <th>Curso</th>
-    </tr>
-    <tr>
-        <td>Pintar o cabelo</td>
-        <td>Ruiva</td>
-        <td>horario1</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Dançar o pipoco</td>
-        <td>Mercês</td>
-        <td>horario2</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Jogar Xadrez enquanto canta shakira</td>
-        <td>Serrano</td>
-        <td>horario3</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Berrar</td>
-        <td>Raquel</td>
-        <td>horario4</td>
-        <td>SOC</td>
-    </tr>
-    <tr>
-        <td>Ser o poste de ETI</td>
-        <td>Poste de ETI</td>
-        <td>horario5</td>
-        <td>ETI</td>
-    </tr>
-    <tr>
-        <td>Dj Carrot enquanto segura na colher</td>
-        <td>Vasquinho aka Dux Praxis</td>
-        <td>horario6</td>
-        <td>GES</td>
-    </tr>
-    <tr>
-        <td>Malabarismo com bucket hats</td>
-        <td>Sérgio</td>
-        <td>horario7</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Ser diabético</td>
-        <td>Afonso</td>
-        <td>horario8</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Ter game com sociologia</td>
-        <td>Daniel</td>
-        <td>horario9</td>
-        <td>LEI</td>
-    </tr>
-    <tr>
-        <td>Ter amigos em todos os cursos (bailão versão feminina)</td>
-        <td>Madjé Teté</td>
-        <td>horario10</td>
-        <td>PSI</td>
-    </tr>
-</table>
-
-<div class=links>
-    <p>
-        <a href="https://www.instagram.com/aeiscte/">AEISCTE</a>
-        <a href="https://www.instagram.com/taiscte/">TAISCTE</a>
-        <a href="https://www.instagram.com/miscutem/">MISCUTEM</a>
-    </p>
-</div>
+</footer>
 </body>
 </html>
