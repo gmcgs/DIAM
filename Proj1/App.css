@@ -114,9 +114,7 @@ footer {
     }
 }
 
-.juri {
-    justify-content: center;
-}
+
 
 p {
     margin: 0;
@@ -134,6 +132,10 @@ input{
 }
 
 table{
+    display: flex;
+    justify-content: center;
+}
+.info{
     display: flex;
     justify-content: center;
 }
