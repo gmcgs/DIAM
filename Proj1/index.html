@@ -7,9 +7,11 @@
 </head>
 <body>
 <header>
-    <a href="https://www.iscte-iul.pt/"><img src="images/iscte.png" alt= "logo do iscte" style="width:200px;height:59px;"></a>
+    <a href="https://www.iscte-iul.pt/">
+        <img src="images/iscte.png" alt="logo do iscte" style="width:200px;height:59px;">
+    </a>
 </header>
-<form className="formulario" action="paginaDeProcessamento">
+<form className="formulario">
 
     <label class="titulo">Título:
         <input class="lab" type="text" placeholder="Ex:malabarismo" name="tit"/>
@@ -39,33 +41,56 @@
         <input class="lab" type="email" placeholder="gmcgs@iscte.pt" name="email">
     </label>
     <br>
+    <label class="nascimento">Data de Nascimento:
+        <input class="lab" type="date" name="data">
+    </label>
+    <br>
+    <label class="cor">Cor preferida:
+        <input class="lab" type="color" name="color">
+    </label>
+    <br>
+    <label class="link">Link pessoal:
+        <input class="lab" type="url" name="link">
+    </label>
+    <br>
+    <form class="range" onsubmit="return false" oninput="level.value = level.valueAsNumber">
+        <label for="flying">Flying Skill Level</label>
+        <input name="flevel" id="flying" type="range" min="0" max="100" value="0">
+        <output for="flying" name="level">0</output>
+        /100
+    </form>
 
+    <div class="horarios">
+        <label class=day for="day">Escolha um Dia:</label>
+        <select class=day id="day" name="dia">
+            <option value="dia1">10/02/2023</option>
+            <option value="dia2">11/02/2023</option>
+            <option value="dia3">12/02/2023</option>
+        </select>
+        <label class=times for="times">Escolha um horário:</label>
+        <select class=times id="times" name="horario">
+            <option value="horario1">12:00h</option>
+            <option value="horario2">15:00h</option>
+            <option value="horario3">18:00h</option>
+            <option value="horario4">21:00h</option>
+        </select>
+    </div>
+    <nav>
+        <input class=b_reg type="submit" value="Registar">
+        <input class=b_lim type="reset" value="Limpar">
+        <form action="acts.html">
+            <input class=b_act type=submit value="Ver atuações já registadas">
+        </form>
+        <form action="more_info.html">
+            <input class="b_info" type=submit value="+info">
+        </form>
+    </nav>
 </form>
-<form class=horarios action="action_page">
-    <label class=day for="day">Escolha um Dia:</label>
-    <select class=day id="day" name="dia">
-        <option value="dia1">10/02/2023</option>
-        <option value="dia2">11/02/2023</option>
-        <option value="dia3">12/02/2023</option>
-    </select>
-    <label class=times for="times">Escolha um horário:</label>
-    <select class=times id="times" name="horario">
-        <option value="horario1">12:00h</option>
-        <option value="horario2">15:00h</option>
-        <option value="horario3">18:00h</option>
-        <option value="horario4">21:00h</option>
-    </select>
-</form>
-<div class="bot">
-    <input class=b_reg type="submit" onclick="add();" value="Registar">
-    <input class=b_lim type="reset" value="Limpar">
-    <form action=acts.html>
-        <input class=b_act type=submit value="Ver atuações já registadas">
-    </form>
-    <form action=more_info.html>
-        <input class="b_info" type=submit value="+info">
-    </form>
-</div>
+
+<aside>
+
+</aside>
+
 <footer>
     <div class="row">
         <div class=column>
