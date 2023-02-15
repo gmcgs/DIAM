@@ -89,9 +89,9 @@ footer {
     background-color: #5790d0;
     padding: 10px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    width: 100%;
     bottom: 0;
-    top: auto;
 }
 
 .column {

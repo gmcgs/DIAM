@@ -1,0 +1,36 @@
+html{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.button{
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.esquivo{
+    display: flex;
+    color: white;
+    background-color: black;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+
+}
+
+div {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: none;
+    border-radius: 20px;
+}
+
+.button:hover + div {
+    display: block;
+}
