@@ -1,0 +1,59 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Bahnschrift, sans-serif;
+}
+body{
+    margin: 0;
+    font-family: Bahnschrift, sans-serif;
+}
+footer {
+    background-color: #5790d0;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+
+
+
+
+/*posição dos botões*/
+nav{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* formato dos botões*/
+.form, .b_info, .b_act{
+    border: none;
+    margin: 4px 4px 100px;
+}
+
+/*estética do botão*/
+input{
+    display: flex;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius: 10px;
+}
+/*em relação ao conteudo do footer*/
+.column {
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
