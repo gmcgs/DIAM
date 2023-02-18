@@ -29,6 +29,14 @@ body{
     auto;
 }
 
+.b_form {
+    background-color: green;
+    color: white;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🫡</text></svg>")
+    16 0,
+    auto;
+}
+
 .b_info{
     background-color: #ee8326;
     color: #ffffff;
@@ -59,7 +67,15 @@ body{
     auto;
 }
 
-.b_reg, .b_lim, .b_info, .b_act, .b_strong{
+.b_back {
+    background-color: #ee8326;
+    color: #ffffff;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👈🏼</text></svg>")
+    16 0,
+    auto;
+}
+
+.b_reg, .b_lim, .b_form, .b_info, .b_act, .b_strong, .b_back {
     margin: 4px;
     border: none;
     margin-bottom: 100px;
@@ -71,7 +87,7 @@ body{
     margin-bottom: 120px;
 }
 
-nav, .horarios, .formulario{
+nav, .horarios {
     margin: 5px;
     display: flex;
     justify-content: center;
