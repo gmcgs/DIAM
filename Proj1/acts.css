@@ -1,51 +1,29 @@
 html{
     background-color: lightcyan;
 }
-header {
+
+table{
     display: flex;
     justify-content: center;
-    padding: 20px;
-    font-family: Bahnschrift, sans-serif;
 }
+header {
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+     font-family: Bahnschrift, sans-serif;
+ }
 body{
     background-color: white;
     margin: 0;
     font-family: Bahnschrift, sans-serif;
 }
 
-h2, h3{
-    display: flex;
-    justify-content: center;
-}
-
-ul, ol{
-    display: grid;
-    justify-content: center;
-    gap: 1.6rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    align-items: center;
-}
-.loc{
-    display: flex;
-    justify-content: center;
-}
- img {
-    width: 12rem;
-    height: 12rem;
-    transition: all 1s;
-}
-figcaption, ol{
-    display: flex;
-    justify-content: center;
-    gap:40px;
-}
-
-
 .bot{
     display: flex;
     justify-content: center;
 }
+
+/*Botoes*/
 .b_back{
     background-color: #cfea6a;
     color: white;
