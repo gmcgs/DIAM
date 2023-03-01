@@ -43,6 +43,15 @@ def alineaB(str1, str2):
     print(f"{toc-tic:.8f}")
     return answer
 
+def alineaC(str1, str2):
+# variante "força bruta" -> basicamente temos que fazer todas as combinações de caracteres possiveis com a primeira string
+# guardar todas numa lista e no fim comparar com a segunda string e ver se ela está na lista. se tiver return true
+# contar passos e tempo como nas outras alineas
+
+def alineaD(str1, str2):
+# temos que contar o numero de vezes que cada caracter aparece em cada string e depois comparar uma com a outra, se for igual da return true
+# contar passos e o tempo como nas outras alineas
+
 
 str1 = "the alias men"
 str2 = "alan smithee"
