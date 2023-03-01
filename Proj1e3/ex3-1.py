@@ -16,6 +16,7 @@ def alineaB():
 def alineaC():
     print("alínea c):")
     restoPoema = "Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Isso me deixa triste e cabisbaixo"
+    global poemaCompleto
     poemaCompleto = poema + " / " + restoPoema
     print(poemaCompleto)
     print("--------------------------------------------------------------")
