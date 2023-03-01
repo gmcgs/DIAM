@@ -16,7 +16,6 @@ def alineaA():
     ocorrVogais = {"A": 98, "E": 100, "I": 0, "O": 0, "U": 0}
     valoresMaisAltos = max(ocorrVogais.values())
     vogalMaisUsada = [k for k, v in ocorrVogais.items() if v == valoresMaisAltos]
-    if
     print("A vogal ou as vogais mais utilizada é: " + str(vogalMaisUsada))
 
 
