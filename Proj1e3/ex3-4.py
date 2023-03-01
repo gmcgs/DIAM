@@ -129,4 +129,6 @@ print("--------------------------------------------------------------")
 print(alineaD(str1, str2))
 
 
-print("Conclusão -> com base nos testes executados com diferentes strings, conseguimos concluir que o algoritmo com menos passos é o da alínea b) enquanto que o algoritmo mais rápido é o da alínea d) (com uma diferença na ordem dos ~10^-6s)")
+print("Conclusão -> com base nos testes executados com diferentes strings, conseguimos concluir que o algoritmo com "
+      "menos passos é o da alínea b) enquanto que o algoritmo mais rápido é o da alínea d) (com uma diferença na "
+      "ordem dos ~10^-6s)")
