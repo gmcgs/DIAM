@@ -13,10 +13,13 @@ def alineaA():
     print("nº de I's: " + str(num_i))
     print("nº de O's: " + str(num_o))
     print("nº de U's: " + str(num_u))
-    ocorrVogais = {"A": 98, "E": 100, "I": 0, "O": 0, "U": 0}
+    ocorrVogais = {"A": num_a, "E": num_e, "I": num_i, "O": num_o, "U": num_u}
     valoresMaisAltos = max(ocorrVogais.values())
     vogalMaisUsada = [k for k, v in ocorrVogais.items() if v == valoresMaisAltos]
-    print("A vogal ou as vogais mais utilizada é: " + str(vogalMaisUsada))
+    if len(vogalMaisUsada) > 1:
+        print("Há vários vencedores! As vogais mais utilizadas foram: " + str(vogalMaisUsada))
+    else:
+        print("A vogal mais utilizada é: " + str(vogalMaisUsada))
 
 
 
