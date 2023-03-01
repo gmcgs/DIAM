@@ -16,8 +16,19 @@ def alineaB():
 def alineaC():
     print("alínea c):")
     restoPoema = "Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Isso me deixa triste e cabisbaixo"
+    global poemaCompleto
     poemaCompleto = poema + " / " + restoPoema
     print(poemaCompleto)
     print("--------------------------------------------------------------")
 
+def alineaD():
+    print("alínea d):")
+    poemaSeparado = poemaCompleto.rsplit(" / ")
+    print(poemaSeparado[len(poemaSeparado)-2])
+    print(poemaSeparado[len(poemaSeparado)-1])
+    print("--------------------------------------------------------------")
 
+alineaA()
+alineaB()
+alineaC()
+alineaD()
