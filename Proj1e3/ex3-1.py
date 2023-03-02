@@ -1,5 +1,17 @@
-poema = "Eu hoje fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo / Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso me deixa triste e cabisbaixo"
+poema = "Eu hoje fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Eu acho que o meu samba é uma " \
+        "corrente / E coerentemente assino embaixo / Hoje é preciso refletir um pouco / E ver que o samba está " \
+        "tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra botar defeito / Precisa ser muito " \
+        "sincero e claro / Pra confessar que andei sambando errado / Talvez precise até tomar na cara / Pra ver que o " \
+        "samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver a multidão sambar contente / Isso " \
+        "me deixa triste e cabisbaixo / Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu " \
+        "acho / Eu acho que o meu samba é uma corrente / E coerentemente assino embaixo / Hoje é preciso refletir um " \
+        "pouco / E ver que o samba está tomando jeito / Só mesmo embriagado ou muito louco / Pra contestar e pra " \
+        "botar defeito / Precisa ser muito sincero e claro / Pra confessar que andei sambando errado / Talvez precise " \
+        "até tomar na cara / Pra ver que o samba está bem melhorado / Tem mais é que ser bem cara de tacho / Não ver " \
+        "a multidão sambar contente / Isso me deixa triste e cabisbaixo"
 poemaCompleto = ""
+
+
 def alineaA():
     print("alínea a):")
     poemaPartido = poema.rsplit(" / ")
@@ -7,26 +19,31 @@ def alineaA():
     print("6º verso: " + poemaPartido[5])
     print("--------------------------------------------------------------")
 
+
 def alineaB():
     print("alínea b):")
     for x in poema.rsplit(" / "):
         print(x)
     print("--------------------------------------------------------------")
 
+
 def alineaC():
     print("alínea c):")
-    restoPoema = "Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Isso me deixa triste e cabisbaixo"
+    restoPoema = "Por isso eu fiz um samba bem pra frente / Dizendo realmente o que é que eu acho / Isso me deixa " \
+                 "triste e cabisbaixo"
     global poemaCompleto
     poemaCompleto = poema + " / " + restoPoema
     print(poemaCompleto)
     print("--------------------------------------------------------------")
 
+
 def alineaD():
     print("alínea d):")
     poemaSeparado = poemaCompleto.rsplit(" / ")
-    print(poemaSeparado[len(poemaSeparado)-2])
-    print(poemaSeparado[len(poemaSeparado)-1])
+    print(poemaSeparado[len(poemaSeparado) - 2])
+    print(poemaSeparado[len(poemaSeparado) - 1])
     print("--------------------------------------------------------------")
+
 
 alineaA()
 alineaB()
