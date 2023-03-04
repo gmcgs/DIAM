@@ -2,7 +2,7 @@ import time
 
 
 def alineaA(str1, str2):
-    print("alínea a):")
+    print("alínea a): ")
     count = 0
     answer = True
     tic = time.perf_counter()
