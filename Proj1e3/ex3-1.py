@@ -25,6 +25,7 @@ def alineaB():
     for x in poema.rsplit(" / "):
         print(x)
     print("--------------------------------------------------------------")
+    
 
 
 def alineaC():

@@ -8,23 +8,23 @@ def alineaA(str1, str2):
     tic = time.perf_counter()
     str1 = str1.replace(" ", "")
     str2 = str2.replace(" ", "")
+    str2 = list(str2)
     for i in range(len(str1)):
         for j in range(len(str2)):
             count += 1
             if (str2[j] == str1[i]):
-                str2 = str2.replace(str2[j], "X", 1)
-    for l in range(len(str2)):
-        if (str2[l] != "X"):
-            answer = False
+                str2[str2.index(str1[i])] = None
+    str2 = "".join(str(x) if x is None else "X" for x in str2)
     toc = time.perf_counter()
     print(str1)
     print(str2)
     print(count)
     print(f"{toc - tic:.8f}")
-    if answer == False:
-        return False
-    else:
-        return True
+    for i in range(len(str2)):
+        if str2[i] == "X":
+            return False
+    return True
+
 
 
 def alineaB(str1, str2):
