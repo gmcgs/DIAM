@@ -41,8 +41,8 @@ def alineaC():
 def alineaD():
     print("alínea d):")
     poemaSeparado = poemaCompleto.rsplit(" / ")
-    print(poemaSeparado[len(poemaSeparado) - 2])
-    print(poemaSeparado[len(poemaSeparado) - 1])
+    print(poemaSeparado[-2])
+    print(poemaSeparado[-1])
     print("--------------------------------------------------------------")
 
 
