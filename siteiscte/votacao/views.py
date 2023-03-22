@@ -12,13 +12,21 @@ def index(request):
     context = {'latest_question_list': latest_question_list}
     return render(request, 'votacao/index.html', context)
 
-def criarquestao(request):
-        return render(request, 'votacao/criarquestao.html')
 
+def criarquestao(request):
+    latest_question_list = Questao.objects.order_by('-pub_data')[:5]
+    context = {'latest_question_list': latest_question_list}
+    return render(request, 'votacao/criarquestao.html', context)
 
 def detalhe(request, questao_id):
     questao = Questao.objects.get(pk=questao_id)
     return render(request, 'votacao/detalhe.html', {'questao': questao})
+
+def save_value(request):
+    if request.method == 'POST':
+        my_model = Questao(questao_texto=request.POST['texto'], pub_data=timezone.now())
+        my_model.save()
+        return HttpResponseRedirect(reverse('votacao:index'))
 
 
 def resultados(request, questao_id):
@@ -46,8 +54,14 @@ def voto(request, questao_id):
             reverse('votacao:resultados', args=(questao.id,))
         )
 
-def save_value(request):
+
+def criaropcao(request, questao_id):
+    questao = get_object_or_404(Questao, pk=questao_id)
+    return render(request, 'votacao/criaropcao.html', {'questao': questao})
+
+
+def save_option(request, questao_id):
     if request.method == 'POST':
-        my_model = Questao(questao_texto=request.POST['texto'], pub_data=timezone.now())
-        my_model.save()
+        q = Questao.objects.get(pk=questao_id)
+        q.opcao_set.create(opcao_texto=request.POST['texto'], votos=0)
         return HttpResponseRedirect(reverse('votacao:index'))

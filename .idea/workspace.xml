@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cc414e8-d188-42fc-989e-1ddcd741f60e" name="Changes" comment="" />
+    <list default="true" id="4cc414e8-d188-42fc-989e-1ddcd741f60e" name="Changes" comment="falta 5.3">
+      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criaropcao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,12 +94,31 @@
       <workItem from="1678812755321" duration="3135000" />
       <workItem from="1679242830395" duration="14188000" />
       <workItem from="1679310817431" duration="619000" />
-      <workItem from="1679318193191" duration="5410000" />
+      <workItem from="1679318193191" duration="13487000" />
     </task>
+    <task id="LOCAL-00001" summary="falta 5.3">
+      <created>1679444736665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679444736665</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -103,5 +130,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="falta 5.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="falta 5.3" />
   </component>
 </project>

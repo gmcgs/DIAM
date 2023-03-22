@@ -7,7 +7,7 @@
            <a href="{% url 'votacao:detalhe' questao.id %}">
                {{ questao.questao_texto }}
            </a>
-</li>
+       </li>
        {% endfor %}
        <div>
            <a href="{% url 'votacao:criarquestao' %}"> Criar nova questão </a>
