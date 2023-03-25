@@ -11,14 +11,14 @@ from .models import Questao, Opcao, Aluno
 from .form import OptionForm, AlunoForm, LoginForm
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def index(request):
     latest_question_list = Questao.objects.order_by('-pub_data')[:5]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'votacao/index.html', context)
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def criarquestao(request):
     if request.method == 'POST':
         try:
@@ -36,14 +36,14 @@ def criarquestao(request):
         return render(request, 'votacao/criarquestao.html')
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def eliminarQuestao(request):
     questoes = Questao.objects.all()
     print(questoes)
     return render(request, 'votacao/eliminarQuestao.html', {'questoes': questoes})
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def eliminar(request):
     try:
         questao_seleccionada = Questao.objects.get(pk=request.POST['questao'])
@@ -57,19 +57,19 @@ def eliminar(request):
     return HttpResponseRedirect(reverse('votacao:index'))
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def detalhe(request, questao_id):
     questao = Questao.objects.get(pk=questao_id)
     return render(request, 'votacao/detalhe.html', {'questao': questao})
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def resultados(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     return render(request, 'votacao/resultados.html', {'questao': questao})
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def voto(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     try:
@@ -91,20 +91,20 @@ def voto(request, questao_id):
         )
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def criaropcao(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     return render(request, 'votacao/criaropcao.html', {'questao': questao})
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def eliminarOpcao(request, opcao_id):
     opcao = get_object_or_404(Opcao, pk=opcao_id)
     opcao.delete()
     return HttpResponseRedirect(reverse('votacao:index'))
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def save_option(request, questao_id):
     if request.method == 'POST':
         q = Questao.objects.get(pk=questao_id)
@@ -146,13 +146,12 @@ def loginview(request):
     return render(request, 'votacao/login.html', {'form': form})
 
 
-@login_required(login_url='votacao/login/')
+@login_required(login_url='votacao/login')
 def logoutview(request):
     logout(request)
     return HttpResponseRedirect(reverse('votacao:login'))
 
 
-class AlunoDetailView(DetailView):
-    model = Aluno
-    template_name = 'votacao/detalheAluno.html'
-    context_object_name = 'object'
+@login_required(login_url='votacao/login')
+def detalheAluno(request, aluno_id):
+    return render(request, 'votacao/detalheAluno', {'id': aluno_id})

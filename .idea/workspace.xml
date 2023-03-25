@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4cc414e8-d188-42fc-989e-1ddcd741f60e" name="Changes" comment="5 feito">
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criarAluno.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalheAluno.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/eliminarQuestao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/snippets/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/277eb43c-35c1-4fd1-ad24-20193c2ab17a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/277eb43c-35c1-4fd1-ad24-20193c2ab17a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/siteiscte/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criaropcao.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criaropcao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criarquestao.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criarquestao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criarAluno.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/criarAluno.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalheAluno.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalheAluno.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/snippets/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/snippets/nav.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/siteiscte/votacao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/siteiscte/votacao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/views.py" afterDir="false" />
     </list>
@@ -50,25 +47,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/carlo/OneDrive/Desktop/projetosDuarte/projetosDuarte",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.0002_aluno">
     <configuration name="0002_aluno" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="siteiscte" />
@@ -136,6 +134,7 @@
       <workItem from="1679318193191" duration="16374000" />
       <workItem from="1679582738828" duration="23055000" />
       <workItem from="1679770050021" duration="886000" />
+      <workItem from="1679771521098" duration="6255000" />
     </task>
     <task id="LOCAL-00001" summary="falta 5.3">
       <created>1679444736665</created>

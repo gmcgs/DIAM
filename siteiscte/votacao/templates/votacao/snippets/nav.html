@@ -7,12 +7,12 @@
   <!-- nav.html -->
   <nav>
     <ul>
-      <li><a href="{% url "votacao:index"%}">Página inicial</a></li>
+      <li><a href="{% url 'votacao:index'%}">Página inicial</a></li>
       {% if user.is_authenticated %}
       {% if not request.user.is_superuser %}
-      <li><a href="{% url "votacao:detalheAluno" user.aluno.id%}">Conta</a></li>
+      <li><a href="{% url 'votacao:detalheAluno' user.id%}">Conta</a></li>
       {% endif %}
-      <li><a href="{% url "votacao:logout"%}">Logout</a></li>
+      <li><a href="{% url 'votacao:logout'%}">Logout</a></li>
       {% endif %}
     </ul>
   </nav>

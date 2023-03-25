@@ -1,6 +1,5 @@
 from django.urls import include, path
 from . import views
-from .views import AlunoDetailView
 
 # (. significa que importa views da mesma directoria)
 app_name = 'votacao'
@@ -30,18 +29,17 @@ urlpatterns = [
 
     path('<int:questao_id>/save_option', views.save_option, name='save_option'),
 
-    # ex: votacao/1/criaropcao
     path('<int:opcao_id>/eliminarOpcao',
          views.eliminarOpcao, name='eliminarOpcao'),
 
     path('criarAluno', views.criarAluno, name='criarAluno'),
 
     # ex: /
-    path("login/", views.loginview, name='login'),
+    path('login', views.loginview, name='login'),
 
     # ex: /
-    path("logout/", views.logoutview, name='logout'),
+    path('logout', views.logoutview, name='logout'),
 
     # ex: /
-    path("detalheAluno/<int:pk>", AlunoDetailView.as_view(), name='detalheAluno'),
+    path('detalheAluno/<int:id>', views.detalheAluno, name='detalheAluno'),
 ]
