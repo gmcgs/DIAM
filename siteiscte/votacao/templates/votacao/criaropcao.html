@@ -5,6 +5,6 @@
 <form action="{% url 'votacao:save_option' questao.id %}" method=post>
     {% csrf_token %}
     <label for="texto">Texto da nova Opção:</label>
-    <input type="text" id="texto" name="texto">
+    <input type="text" id="texto" name="texto"><br><br>
     <input type="submit" value="Gravar nova opção">
 </form>

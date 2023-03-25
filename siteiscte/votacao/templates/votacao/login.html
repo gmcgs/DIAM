@@ -1,0 +1,26 @@
+
+{% load static %}
+
+{% block title %} Index {% endblock %} 
+
+{% block content %}
+<section class="modal">
+
+  <h1>Login</h1>
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages.error %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form class="form" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input class="btn" type="submit" value="Login" />
+    <button class="btn" onclick="window.location.href=' {% url 'votacao:criarAluno' %} '" type="button"> Criar conta  </button>
+  </form>
+  <br/>
+
+</section>
+{% endblock %}

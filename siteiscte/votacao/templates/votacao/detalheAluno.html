@@ -1,0 +1,9 @@
+{% block title %} Informação conta {% endblock %}
+
+{% block content %}
+    {% include 'votacao/snippets/nav.html' %}
+
+    <p>Email : {{ object.user.email }}</p>
+    <p>Cruso: {{ object.curso }}</p>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 
-<form method="post" action="{% url 'votacao:save_value' %}">
+<form method="post" action="{% url 'votacao:criarquestao' %}">
   {% csrf_token %}
   <label for="texto">Texto da nova Questão:</label>
   <input type="text" id="texto" name="texto"><br><br>

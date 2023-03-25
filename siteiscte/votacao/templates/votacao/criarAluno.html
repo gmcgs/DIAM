@@ -1,0 +1,12 @@
+
+{% block title %} Criar Conta{% endblock %}
+
+{% block content %}
+
+{% include 'votacao/snippets/nav.html' %}
+
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" value="Criar" />
+  </form>
+{% endblock %}

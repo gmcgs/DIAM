@@ -1,39 +1,75 @@
-from django.http import HttpResponse
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.template import loader
 from django.shortcuts import get_object_or_404, render
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.utils import timezone
-from .models import Questao, Opcao
+from django.views.generic import DetailView
+
+from .models import Questao, Opcao, Aluno
+from .form import OptionForm, AlunoForm, LoginForm
 
 
+@login_required(login_url='votacao/login/')
 def index(request):
     latest_question_list = Questao.objects.order_by('-pub_data')[:5]
     context = {'latest_question_list': latest_question_list}
     return render(request, 'votacao/index.html', context)
 
 
+@login_required(login_url='votacao/login/')
 def criarquestao(request):
-    latest_question_list = Questao.objects.order_by('-pub_data')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'votacao/criarquestao.html', context)
+    if request.method == 'POST':
+        try:
+            questao_texto = request.POST.get("texto")
+        except KeyError:
+            return render(request, 'votacao/criarquestao.html')
+        if questao_texto:
+            questao = Questao(questao_texto=questao_texto,
+                              pub_data=timezone.now())
+            questao.save()
+            return HttpResponseRedirect(reverse('votacao:detalhe', args=(questao.id,)))
+        else:
+            return HttpResponseRedirect(reverse('votacao:criarquestao'))
+    else:
+        return render(request, 'votacao/criarquestao.html')
 
+
+@login_required(login_url='votacao/login/')
+def eliminarQuestao(request):
+    questoes = Questao.objects.all()
+    print(questoes)
+    return render(request, 'votacao/eliminarQuestao.html', {'questoes': questoes})
+
+
+@login_required(login_url='votacao/login/')
+def eliminar(request):
+    try:
+        questao_seleccionada = Questao.objects.get(pk=request.POST['questao'])
+    except (KeyError, Questao.DoesNotExist):
+        # Apresenta de novo o form para votar
+        questoes = Questao.objects.all()
+        return render(request, 'votacao/eliminarQuestao.html',
+                      {'questoes': questoes, 'error_message': "Não escolheu uma opção", })
+    else:
+        questao_seleccionada.delete()
+    return HttpResponseRedirect(reverse('votacao:index'))
+
+
+@login_required(login_url='votacao/login/')
 def detalhe(request, questao_id):
     questao = Questao.objects.get(pk=questao_id)
     return render(request, 'votacao/detalhe.html', {'questao': questao})
 
-def save_value(request):
-    if request.method == 'POST':
-        my_model = Questao(questao_texto=request.POST['texto'], pub_data=timezone.now())
-        my_model.save()
-        return HttpResponseRedirect(reverse('votacao:index'))
 
-
+@login_required(login_url='votacao/login/')
 def resultados(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     return render(request, 'votacao/resultados.html', {'questao': questao})
 
 
+@login_required(login_url='votacao/login/')
 def voto(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     try:
@@ -55,13 +91,68 @@ def voto(request, questao_id):
         )
 
 
+@login_required(login_url='votacao/login/')
 def criaropcao(request, questao_id):
     questao = get_object_or_404(Questao, pk=questao_id)
     return render(request, 'votacao/criaropcao.html', {'questao': questao})
 
 
+@login_required(login_url='votacao/login/')
+def eliminarOpcao(request, opcao_id):
+    opcao = get_object_or_404(Opcao, pk=opcao_id)
+    opcao.delete()
+    return HttpResponseRedirect(reverse('votacao:index'))
+
+
+@login_required(login_url='votacao/login/')
 def save_option(request, questao_id):
     if request.method == 'POST':
         q = Questao.objects.get(pk=questao_id)
         q.opcao_set.create(opcao_texto=request.POST['texto'], votos=0)
         return HttpResponseRedirect(reverse('votacao:index'))
+
+
+def criarAluno(request):
+    if request.method == 'POST':
+        try:
+            form = AlunoForm(request.POST)
+            if form.is_valid():
+                form.save()  # modelForm
+                return HttpResponseRedirect(reverse('votacao:index'))
+        except Exception:
+            form = AlunoForm()
+            # Mostrar Erro
+            return render(request, 'votacao/criarAluno.html', {'form': form})
+    else:
+        form = AlunoForm()
+    return render(request, 'votacao/criarAluno.html', {'form': form})
+
+
+def loginview(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        print(form.is_valid())
+        # if form.is_valid(): # questão??
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect(reverse('votacao:index'))
+    # else:
+    #    messages.error(request, 'Invalid username or password.')
+    else:
+        form = LoginForm()
+    return render(request, 'votacao/login.html', {'form': form})
+
+
+@login_required(login_url='votacao/login/')
+def logoutview(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('votacao:login'))
+
+
+class AlunoDetailView(DetailView):
+    model = Aluno
+    template_name = 'votacao/detalheAluno.html'
+    context_object_name = 'object'

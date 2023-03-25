@@ -1,0 +1,24 @@
+
+{% block title %} Eliminar questões {% endblock %} 
+
+{% block content %}
+{% include 'votacao/snippets/nav.html' %} 
+
+<h1>Escolha a questão a eliminar</h1>
+
+{% if error_message %}
+<p><strong>{{ error_message }}</strong></p>
+{% endif %}
+
+<form action="{% url 'votacao:eliminar'%}" method="post">
+  {% csrf_token %} 
+  {% for questao in questoes %}
+    <input type="radio" name="questao" id="questao{{ forloop.counter }}" value="{{ questao.id }}" />
+    <label for="questao{{ forloop.counter }}"> {{ questao.questao_texto }} </label>
+    <br />
+  {% endfor %}
+  <br />
+  <input type="submit" value="Eliminar" /><br /><br />
+</form>
+
+{% endblock %}
