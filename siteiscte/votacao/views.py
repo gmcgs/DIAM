@@ -13,7 +13,7 @@ from .form import OptionForm, AlunoForm, LoginForm
 
 @login_required(login_url='votacao/login')
 def index(request):
-    latest_question_list = Questao.objects.order_by('-pub_data')[:5]
+    latest_question_list = Questao.objects.order_by('-pub_data')
     context = {'latest_question_list': latest_question_list}
     return render(request, 'votacao/index.html', context)
 
@@ -153,5 +153,5 @@ def logoutview(request):
 
 
 @login_required(login_url='votacao/login')
-def detalheAluno(request, aluno_id):
-    return render(request, 'votacao/detalheAluno', {'id': aluno_id})
+def detalheAluno(request, id):
+    return render(request, 'votacao/detalheAluno.html', {'id': id})

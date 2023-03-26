@@ -6,6 +6,7 @@ app_name = 'votacao'
 urlpatterns = [
     # ex: votacao/
     path("", views.index, name='index'),
+
     # ex: votacao/1
     path('<int:questao_id>', views.detalhe, name='detalhe'),
 

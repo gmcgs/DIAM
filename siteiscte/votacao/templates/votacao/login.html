@@ -15,7 +15,8 @@
   <form class="form" method="post">
     {% csrf_token %} {{ form.as_p }}
     <input class="btn" type="submit" value="Login" />
-    <button class="btn" onclick="window.location.href='{% url 'votacao:criarAluno'%}'" type="button"> Criar conta  </button>
+    <button class="btn" onclick="window.location.href='{% url 'votacao:criarAluno' %}'" type="button"> Criar conta </button>
+
   </form>
   <br/>
 
