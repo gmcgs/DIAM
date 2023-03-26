@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.template import loader
 from django.shortcuts import get_object_or_404, render
 from django.http import Http404, HttpResponse, HttpResponseRedirect
@@ -81,11 +82,23 @@ def voto(request, questao_id):
             'error_message': "Não escolheu uma opção",
         })
     else:
-        opcao_seleccionada.votos += 1
-        opcao_seleccionada.save()
-        # Retorne sempre HttpResponseRedirect depois de tratar os dados POST de um form
-        # pois isso impede os dados de serem tratados repetidamente se o utilizador
-        # voltar para a página web anterior.
+        if 'eliminarOpcao' in request.POST:
+            opcao_seleccionada.delete()
+            return render(request, 'votacao/detalhe.html', {'questao': questao, })
+        if not request.user.is_superuser:
+            numeroGrupo = request.user.aluno.grupo[-2]
+            try:
+                numeroGrupo = int(numeroGrupo) + 10
+                print(numeroGrupo < request.user.aluno.votos)
+                if numeroGrupo > request.user.aluno.votos:
+                    request.user.aluno.votos += 1
+                    opcao_seleccionada.votos += 1
+                    opcao_seleccionada.save()
+            except ValueError:
+                return render(request, 'votacao/detalhe.html', {'questao': questao, 'error_message': "Num de grupo invalido", })
+        else:
+            opcao_seleccionada.votos += 1
+            opcao_seleccionada.save()
         return HttpResponseRedirect(
             reverse('votacao:resultados', args=(questao.id,))
         )
@@ -115,17 +128,23 @@ def save_option(request, questao_id):
 def criarAluno(request):
     if request.method == 'POST':
         try:
-            form = AlunoForm(request.POST)
-            if form.is_valid():
-                form.save()  # modelForm
-                return HttpResponseRedirect(reverse('votacao:index'))
-        except Exception:
-            form = AlunoForm()
-            # Mostrar Erro
-            return render(request, 'votacao/criarAluno.html', {'form': form})
+            nome = request.POST.get('nome')
+            email = request.POST.get('email')
+            grupo = request.POST.get('grupo')
+            curso = request.POST.get('curso')
+        except KeyError:
+                return render(request, 'votacao/criarAluno.html')
+
+        if nome and email and grupo and curso:
+            user = User.objects.create_user(nome, email)
+            user.save()
+            aluno = Aluno.objects.create(user=user, grupo=grupo, curso=curso)
+            aluno.save()
+            return HttpResponseRedirect(reverse('votacao:login'))
+        else:
+            return HttpResponseRedirect(reverse('votacao:criarAluno'))
     else:
-        form = AlunoForm()
-    return render(request, 'votacao/criarAluno.html', {'form': form})
+        return render(request, 'votacao/criarAluno.html')
 
 
 def loginview(request):

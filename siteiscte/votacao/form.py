@@ -7,6 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 class OptionForm(forms.Form):
     opcao = forms.CharField(label="Opcao", max_length=100)
 
+
 class AlunoForm(forms.ModelForm):
     nome = forms.CharField(max_length=30)
     email = forms.EmailField()

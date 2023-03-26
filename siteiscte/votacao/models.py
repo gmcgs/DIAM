@@ -31,3 +31,10 @@ class Aluno(models.Model):
     curso = models.CharField(max_length=100)
     grupo = models.CharField(max_length=10, default=None)
     votos = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.user.username
+
+    def adicionar_voto(self):
+        self.votos += 1
+        self.save()
