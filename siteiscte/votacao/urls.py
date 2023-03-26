@@ -36,7 +36,7 @@ urlpatterns = [
     path('criarAluno', views.criarAluno, name='criarAluno'),
 
     # ex: /
-    path('login', views.loginview, name='login'),
+    path('votacao/login', views.loginview, name='login'),
 
     # ex: /
     path('logout', views.logoutview, name='logout'),

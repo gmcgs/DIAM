@@ -154,4 +154,6 @@ def logoutview(request):
 
 @login_required(login_url='votacao/login')
 def detalheAluno(request, id):
-    return render(request, 'votacao/detalheAluno.html', {'id': id})
+    aluno = get_object_or_404(Aluno, id=id)
+    #print(aluno.curso)
+    return render(request, 'votacao/detalheAluno.html', {'aluno': aluno})
