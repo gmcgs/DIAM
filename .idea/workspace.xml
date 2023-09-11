@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4cc414e8-d188-42fc-989e-1ddcd741f60e" name="Changes" comment="eu tentei x2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/detalhe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/resultados.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/templates/votacao/resultados.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteiscte/votacao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/siteiscte/votacao/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="4cc414e8-d188-42fc-989e-1ddcd741f60e" name="Changes" comment="eu tentei x2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,6 +133,7 @@
       <workItem from="1679771521098" duration="6705000" />
       <workItem from="1679835347837" duration="8055000" />
       <workItem from="1679857440071" duration="6580000" />
+      <workItem from="1694457646596" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="falta 5.3">
       <created>1679444736665</created>
